@@ -4,7 +4,8 @@ import './App.css';
 //import MyList from "./04/MyList";
 //import Hello from './01/Hello';
 //import MyClock from './02/MyClock';
-import Lotto from "./05/Lotto";
+//import Lotto from "./05/Lotto";
+import FMain from "./06/FMain";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
       <main className = "w-full grow flex flex-col justify-center items-center overflow-y-auto">
        {/* <MyDiv1 /> */}
        {/* <MyList /> */}
-       <Lotto />
+       {/* <Lotto /> */}
+       <FMain />
       </main>
 
       <footer className="w-full h-20 font-bold
