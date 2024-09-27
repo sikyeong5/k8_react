@@ -3,9 +3,9 @@ import './App.css';
 //import MyDiv1 from "./03/MyDiv1";
 //import MyList from "./04/MyList";
 //import Hello from './01/Hello';
-//import MyClock from './02/MyClock';
+import MyClock from './02/MyClock';
 //import Lotto from "./05/Lotto";
-import FMain from "./06/FMain";
+//import FMain from "./06/FMain";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           <FcLike />
           </p>
       </header>
-      <main className = "w-full grow flex flex-col justify-center items-center overflow-y-auto">
+      <main className = "w-full grow flex flex-col items-center overflow-y-auto">
        {/* <MyDiv1 /> */}
        {/* <MyList /> */}
        {/* <Lotto /> */}
@@ -32,8 +32,8 @@ function App() {
       </main>
 
       <footer className="w-full h-20 font-bold
-                         flex justify-center items-center
-                        bg-rose-950 text-white">
+                         flex items-center
+                        bg-fuchsia-950 text-white">
           <p>오시경</p>
     </footer>
     </div>
