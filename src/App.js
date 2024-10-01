@@ -3,10 +3,11 @@ import './App.css';
 //import MyDiv1 from "./03/MyDiv1";
 //import MyList from "./04/MyList";
 //import Hello from './01/Hello';
-import MyClock from './02/MyClock';
+//import MyClock from './02/MyClock';
 //import Lotto from "./05/Lotto";
 //import FMain from "./06/FMain";
-
+//import BoxOffice from "./07/BoxOffice";
+import MyBox from "./08/MyBox";
 function App() {
   return (
     
@@ -28,7 +29,8 @@ function App() {
        {/* <MyDiv1 /> */}
        {/* <MyList /> */}
        {/* <Lotto /> */}
-       <FMain />
+       {/* <FMain /> */}
+       <MyBox />
       </main>
 
       <footer className="w-full h-20 font-bold
