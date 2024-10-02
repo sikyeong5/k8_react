@@ -7,7 +7,8 @@ import './App.css';
 //import Lotto from "./05/Lotto";
 //import FMain from "./06/FMain";
 //import BoxOffice from "./07/BoxOffice";
-import MyBox from "./08/MyBox";
+//import MyBox from "./08/MyBox";
+import Traffic from "./09/Traffic";
 function App() {
   return (
     
@@ -30,11 +31,13 @@ function App() {
        {/* <MyList /> */}
        {/* <Lotto /> */}
        {/* <FMain /> */}
-       <MyBox />
+       {/* <MyBox /> */}
+       <Traffic />
+     
       </main>
 
       <footer className="w-full h-20 font-bold
-                         flex items-center
+                         flex justify-center items-center
                         bg-fuchsia-950 text-white">
           <p>오시경</p>
     </footer>
