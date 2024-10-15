@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom" ;
 
 export default function RouteHome() {
   return (
-    <div className="w-1/2 grid grid-cols-2 text-xl mt-5">
+    <div className="w-1/2 grid grid-cols-2 text-2xl mt-5">
       <div>
         <h1 className="flex justify-center items-center
-                        text-2xl mb-5 p-5 bg-slate-100">
+                        text-3xl mb-5 p-5 bg-slate-100">
                          page1
         </h1> 
         <ul>
@@ -16,7 +16,7 @@ export default function RouteHome() {
       </div>
       <div>
       <h1 className="flex justify-center items-center
-                        text-2xl mb-5 p-5 bg-blue-100">
+                        text-3xl mb-5 p-5 bg-blue-100">
                           page2
       </h1>
       <ul>
