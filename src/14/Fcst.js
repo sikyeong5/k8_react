@@ -15,6 +15,8 @@ export default function Fcst() {
   const txtDt = useRef();
   const txtArea = useRef();
 
+  const today = new Date().toISOString().split('T')[0];
+  
   const handleOk = (gubun) => {
     if (txtDt.current.value ==='') {
       alert('날짜를 선택하세요')
@@ -45,10 +47,11 @@ export default function Fcst() {
 
 
         <div className="w-10/12 grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
-          <input type = "date"
+          <input type = "date"  
           ref = {txtDt}
                   className="form-input w-full"
-                  id= 'txt1' />
+                  id= 'txt1'
+                  max={today} />
           <select className="form-select w-full"
           ref= {txtArea} >
             <option value= ''> --지역을 선택하세요 </option>
