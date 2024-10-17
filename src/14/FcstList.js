@@ -13,6 +13,12 @@ export default function FcstList() {
   //form 값을 참조하기 위한 ref변수
   const selRef = useRef() ;
 
+  //sky 항목
+  const sky ={'1': '맑음(☀)', '3' : '구름많음(🌥)', '4': '흐림(☁)'}
+  
+  //pty
+  const pty={'0':'없음', '1':'비', '2': '눈/비', '3': '눈', '4':'소나기', '5':'빗방울', '6':'빗방울눈날림', '7':'눈날림'}
+
   //선택항목 테이블 데이터
   const [trs, setTrs] = useState([]);
   const [sParams] = useSearchParams() ;
@@ -39,7 +45,16 @@ export default function FcstList() {
                   <td>{code.항목명}{item.category} </td>
                   <td>{item.fcstDate.slice(0,4)} - {item.fcstDate.slice(4,6)} - {item.fcstDate.slice(6,8)} </td>
                   <td>{item.fcstTime.slice(0,2)}  </td>
-                  <td>{item.fcstValue}{code.단위}</td>
+                  <td>{item.fcstValue}{code.단위}
+                  {
+                    item.category === 'SKY' ? sky[item.fcstValue]
+                        : item.fcstValue + code.단위
+                  }
+                  { 
+                    item.category === 'PTY' ? pty[item.fcstValue]
+                    : item.fcstValue + code.단위
+                  }
+                  </td>
                 </tr>)
     setTrs(tm);
 
