@@ -1,6 +1,6 @@
 import Recoil2 from "./Recoil2"
 import Recoil3 from "./Recoil3"
-import { AtomN } from "./AtomN";
+import { AtomN } from "./AtomN1";
 import { useRecoilValue } from "recoil";
 
 
