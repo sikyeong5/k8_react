@@ -1,52 +1,48 @@
 import TailButton from "../Ui/TailButton" ;
 import { useState, useEffect, useRef } from "react";
 export default function Rest() {
-  const{setTdata, tdata} = useState();
-
+  const [tdata, setTdata] = useState([]) ;
+  const [trs , setTrs] = useState([]) ;
 
   const txt1Ref = useRef();
   const txt2Ref = useRef();
 
-  const url = 'http://localhost:3005/posts';
+  const url = 'http://localhost:3005/posts' ;
 
-  const getFetchData = async()=> {
-    const resp = await fetch(url);
-    const data = await resp.json();
+  const getFetchData = async() => {
+    const resp = await fetch(url) ;
+    const data = await resp.json() ;
 
-    setTdata(data)
+    setTdata(data);
   }
 
-useEffect(()=>{
-  getFetchData();
-},[])
+  useEffect(()=>{
+    getFetchData();
+  },[]) ;
 
-useEffect(()=>{
-  if (!tdata) return;
-  const tm = tdata.map(item => <tr key={item.id}>
+  useEffect(()=>{
+    const tm = tdata.map(item => <tr key={item.id}>
                                   <td>{item.title}</td>
                                   <td>{item.author}</td>
                                   <td>
-                                    <TailButton caption= '삭제'
-                                                color ='orange'
+                                  <TailButton caption='삭제'
+                                                color='orange'
                                                 handleClick=''
-                                                size = 'w-1/2' />
-                          
+                                                size='w-1/2' /> 
                                   </td>
                                   <td>
-                                    <TailButton caption= '수정'
-                                                color ='pink'
+                                  <TailButton caption='수정'
+                                                color='pink'
                                                 handleClick=''
-                                                size = 'w-1/2' />
-                          
+                                                size='w-1/2' />
                                   </td>
-
-
-                               </tr>);
-},[])
+                                 </tr>);
+    setTrs(tm);
+  }, [tdata]);
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-11/12 grid grid-cols-1 md:grid-cols-7 
+      <div className="w-10/12 grid grid-cols-1 md:grid-cols-7 
                       bg-slate-100
                       text-center my-5 p-5">
         <label htmlFor="txt1" className="my-2">제목</label>
@@ -63,9 +59,10 @@ useEffect(()=>{
             className="form-input w-full"
             inRef={txt2Ref} />
         </div>
-        <TailButton caption = "입력"
-                  color = "pink"
-                  handleClick = '' />  
+        <TailButton caption='입력'
+                      color='pink'
+                      handleClick=''
+                      size='w-1/2' /> 
       </div>
       <table
         className="w-11/12 text-left text-sm font-light text-surface">
@@ -79,7 +76,7 @@ useEffect(()=>{
           </tr>
         </thead>
         <tbody>
-        
+          {trs}
         </tbody>
       </table>
     </div>
